@@ -4,11 +4,15 @@ $ git --version
 ```
 ## User information
 ```
-$ git config --global user.name "[name]"
+$ git config --global [--add | --unset ] user.name '[name]'
 ```
 ```
-$ git config --global user.email "[email address]"
+$ git config --global [--add | --unset ]  user.email '[email address]'
 ```
+* none:Cheke
+* --add:Add
+* --unset:Delete
+* :modify:none+name
 ```
 $ git config --global color.ui true
 ```
@@ -16,9 +20,6 @@ $ git config --global color.ui true
 $ git config --list
 ```
 *Viewing Configuration Information,also see ~/.gitconfig*
-```
-$ git config user.name
-```
 
 ## Create Git Warehouse
 ```
@@ -76,18 +77,19 @@ $ git mv [-f] <file> <newFile>
 ```
 $ git log [option] [branch name/submit hash]
 ```
-* -p: Display the submitted patches (specific changes).
 * --oneline: Display submission information in a concise one line format.
+* --reverse:Reverse display of all logs
 * --graph: Display branch and merge history in a graphical manner.
-* --decorate: Displays the submission pointed to by the branch and label.
 * --author=<Author>: Only displays submissions from specific authors.
 * --since=<Time>: Only displays submissions after the specified time.
 * --until=<Time>: Only displays submissions before the specified time.
+* --decorate: Displays the submission pointed to by the branch and label.
 * --grep=<Mode>: Only display submission messages containing the specified mode.
 * --no-merges: Do not display merge submissions.
 * --stat: Display brief statistical information, including modified files and number of lines.
 * --abbrev-commit: Use a short commit hash value.
 * --pretty=<Format>: Use a custom submission information display format
+* -p: Display the submitted patches (specific changes).
 ```
 $ git blame [option] <file path>
 ```
@@ -114,10 +116,40 @@ $ git fetch [alias]
 ```
 $ git merge [alias]/[branch]
 ```
-
-
-
-
+```
+$ git pull <Remote Host Name> <Remote Branch Name>:<Local Branch Name>
+```
+*git pull=git fetch + git merge*
+* If the remote branch is merged with the current branch, the part after the colon can be omitted
+```
+$ git push <Remote Host Name> <Remote Branch Name>:<Local Branch Name>
+```
+* If the local branch name is the same as the remote branch name, the colon can be omitted
+```
+$ git remote rm [alias]
+```
+## Git Branch Management
+```
+$ git branch [-d] (branchname)
+```
+* none:List your local branches
+* -d:Delete the branch
+```
+$ git checkout [-b] (branchname)
+```
+* -b:Create a new branch and immediately switch to that branch
+```
+$ git merge
+```
+## Git tag
+```
+$ git tag [-a | -d] <tagname> [commit] -m "tagcontent"
+```
+* -d:delete the tag
+*git tag View all tags,git log --decorate show labels*
+```
+$ git show <tagname>
+```
 
 
 
