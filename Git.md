@@ -35,28 +35,31 @@ $ git status [-s]
 * ？？:first creation but untracked files
 * green A:files modified can be submitted to the git repository for backup processing
 * red M :local files are different from staging area files
-* green M:local files are the same as staging area files
+* green M:staging area files are different from previous commit version
 * green D:files Backed up is not the local files
 ```
 $ git diff [--param] [flie]
 ```
 * none:differences between staging area and workspace
 * --cached/staged:The difference between the staging area and the previous commit
-* git diff [first-branch]...[second-branch]:differences between two submissions
+* git diff [branch1] [branch2] --stat:show the differences between branch1 and branch2
+* git diff [branch1] [branch2] [filepath]:Display detailed differences for the file
+
 ```
 $ git add <file1> [file2]
 ```
 * . represents all files 
 ```
-$ git commit <file1> [file2] -m '[message]'
+$ git commit <file1> [file] -m '[message]'
 ```
 * git commit -a= git add + git commit
+<!-- This content will not appear in the rendered Markdown -->
 
 ```
 $ git reset [--soft|--mixed|--hard] [HEAD]
 ```
 * --mixed(default):reset the files in the staging area to be consistent with the previous commit
-* --soft:fallback to a certain version
+* --soft:fallback to a certain commit version
 * --hard(caution):revoke all uncommitted modifications in the workspace, return the staging area and workspace to the previous version, and delete all previous information submissions
 * HEAD(HEAD ~0) current version, HEAD^(HEAD ~1) last version, HEAD^^^（HEAD^3）last last last version
 
