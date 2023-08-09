@@ -87,11 +87,9 @@ $ git log [option] [branch name/submit hash]
 * --since=<Time>: only displays submissions after the specified time.
 * --until=<Time>: only displays submissions before the specified time.
 * --decorate: displays the submission pointed to by the branch and label.
-* --grep=<Mode>: only display submission messages containing the specified mode.
 * --no-merges: do not display merge submissions.
 * --stat: display brief statistical information, including modified files and number of lines.
 * --abbrev-commit: use a short commit hash value.
-* --pretty=<Format>: use a custom submission information display format
 * -p: display the submitted patches (specific changes).
 ```
 $ git blame [option] <file path>
