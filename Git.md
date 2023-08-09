@@ -145,7 +145,7 @@ $ git merge
 ```
 ## Git tag
 ```
-$ git tag [-a|-d] <tagname> [commit] -m "tagcontent"
+$ git tag [-a|-d] <tagname> [commit] -m 'tagcontent'
 ```
 * -d:delete the tag
 *git tag View all tags,git log --decorate show labels*
