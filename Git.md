@@ -58,7 +58,7 @@ $ git reset [--soft|--mixed|--hard] [HEAD]
 * --mixed(default):reset the files in the staging area to be consistent with the previous commit
 * --soft:fallback to a certain version
 * --hard(caution):revoke all uncommitted modifications in the workspace, return the staging area and workspace to the previous version, and delete all previous information submissions
-* HEAD(HEAD~0) current version, HEAD^(HEAD~1) last version, HEAD^^^（HEAD^3）last last last version
+* HEAD(HEAD ~0) current version, HEAD^(HEAD ~1) last version, HEAD^^^（HEAD^3）last last last version
 
   *git reset HEAD :cancel cached content*
   
