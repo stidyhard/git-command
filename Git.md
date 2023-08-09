@@ -4,15 +4,15 @@ $ git --version
 ```
 ## User information
 ```
-$ git config --global [--add | --unset ] user.name '[name]'
+$ git config --global [--add|--unset] user.name '[name]'
 ```
 ```
-$ git config --global [--add | --unset ]  user.email '[email address]'
+$ git config --global [--add|--unset]  user.email '[email address]'
 ```
-* none:Cheke
-* --add:Add
-* --unset:Delete
-* :modify:none+name
+* none+none:cheke
+* --add:add
+* --unset:delete
+* none+name:modify
 ```
 $ git config --global color.ui true
 ```
@@ -23,10 +23,10 @@ $ git config --list
 
 ## Create Git Warehouse
 ```
-$ git init [newRepo]
+$ git init [newrepo]
 ```
 ```
-$ git clone <url> [directory or alias]
+$ git clone <url> [directory|alias]
 ```
 ## Submission and modification
 ```
